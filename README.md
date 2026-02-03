@@ -1,20 +1,51 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Misión: PPT del Terror 💀
 
-# Run and deploy your AI Studio app
+Un juego de supervivencia académica creado con React, Vite y Tailwind CSS. Tu objetivo es esquivar los obstáculos académicos y subir tu tarea antes de que el profesor te repruebe.
 
-This contains everything you need to run your app locally.
+## ⚠️ Aclaración Importante
+**NO NECESITAS NINGUNA API KEY.**
+Este juego es 100% estático y corre localmente en tu navegador. Si leíste instrucciones sobre claves de Google anteriormente, eran parte de una plantilla genérica y puedes ignorarlas.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1CFdKHSS7cW2XJAiTtySt8IM6OphmIXzc
+## 🚀 Cómo ejecutar el juego
 
-## Run Locally
+Tienes dos formas de correrlo:
 
-**Prerequisites:**  Node.js
+### Opción A: Usando Docker (Lo más fácil para desplegar)
+Si ya tienes el `Dockerfile` configurado:
 
+1. **Construir la imagen:**
+   ```bash
+   docker build -t ppt-attack .
+   ```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+2. **Correr el contenedor:**
+   ```bash
+   docker run -p 8080:80 ppt-attack
+   ```
+
+3. Abre tu navegador en: `http://localhost:8080`
+
+### Opción B: Ejecución Local (Node.js)
+Si prefieres instalar las librerías en tu sistema (Debian/Windows/Mac):
+
+1. **Instalar dependencias:**
+   ```bash
+   npm install
+   ```
+
+2. **Iniciar modo desarrollo:**
+   ```bash
+   npm run dev
+   ```
+
+## 🎮 Controles
+- **Flechas del teclado:** Mover al estudiante.
+- **Objetivo:** Recolectar los disquetes (💾) para subir el PPT.
+- **Evita:** Los proyectiles del profesor (❌) y las tareas extra (📝).
+
+## 🛠 Tecnologías
+- React 18
+- TypeScript
+- Tailwind CSS
+- Canvas API (para la lógica del juego)
+- Docker + Nginx (para producción)
